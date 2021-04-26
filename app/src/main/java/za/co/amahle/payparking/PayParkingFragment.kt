@@ -25,7 +25,7 @@ class PayParkingFragment : Fragment(), View.OnClickListener {
             val minValue = 10
             val maxValue = 200
             val theRandom = Random()
-            return if (java.lang.Double.valueOf((maxValue - minValue).toDouble()).isInfinite() == false) {
+            return if (!java.lang.Double.valueOf((maxValue - minValue).toDouble()).isInfinite()) {
                 round(minValue + (maxValue - minValue) * theRandom.nextDouble())
             } else 0.0
         }
